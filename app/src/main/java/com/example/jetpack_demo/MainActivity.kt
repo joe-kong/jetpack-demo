@@ -105,7 +105,7 @@ fun MessageCard(msg: Message) {
         )
 
         // Add a horizontal space between the image and the column
-        Spacer(modifier = Modifier.width(20.dp))
+        Spacer(modifier = Modifier.width(10.dp))
 
         // We keep track if the message is expanded or not in this
         // variable
@@ -119,7 +119,7 @@ fun MessageCard(msg: Message) {
                 style = MaterialTheme.typography.titleSmall
             )
             // Add a vertical space between the author and message texts
-            Spacer(modifier = Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(4.dp))
 //            Text(
 //                text = msg.body,
 //                style = MaterialTheme.typography.bodyMedium

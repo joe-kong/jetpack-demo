@@ -32,3 +32,4 @@ replay_pid*
 .gradle/8.0/executionHistory/executionHistory.bin
 .gradle/8.0/executionHistory/executionHistory.lock
 .gradle/8.0/fileHashes/fileHashes.bin
+/.gradle
