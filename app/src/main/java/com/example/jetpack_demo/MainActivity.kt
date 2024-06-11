@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -147,20 +148,37 @@ fun GreetingPreview() {
 //        MessageCard(Message("Android","Jetpack Compose"))
 //    }
 //}
-
-//@Preview(showBackground = true)
-@Preview(name = "Light Mode")
-@Preview(
-    uiMode = Configuration.UI_MODE_NIGHT_YES,
-    showBackground = true,
-    name = "Dark Mode"
-)
 @Composable
-fun PreviewMessageCard() {
-    JetpackdemoTheme {
-        Surface {
-            MessageCard(Message("Lexi", "Take a look at Jetpack Compose, it's great!")
-            )
+fun Conversation(messages: List<Message>) {
+    LazyColumn {
+        items(messages) { it ->
+            MessageCard(it)
         }
     }
 }
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewConversation() {
+    JetpackdemoTheme {
+
+        Conversation(SampleData.conversationSample)
+    }
+}
+//
+////@Preview(showBackground = true)
+//@Preview(name = "Light Mode")
+//@Preview(
+//    uiMode = Configuration.UI_MODE_NIGHT_YES,
+//    showBackground = true,
+//    name = "Dark Mode"
+//)
+//@Composable
+//fun PreviewMessageCard() {
+//    JetpackdemoTheme {
+//        Surface {
+//            MessageCard(Message("Lexi", "Take a look at Jetpack Compose, it's great!")
+//            )
+//        }
+//    }
+//}
